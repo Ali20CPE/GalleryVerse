@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D VR Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.controls.min.js"></script>
+  <style>
+    body { margin: 0;}
+    
+  </style>
+</head>
+<body>
+  <div id="d3title">Virtual 3D Art Gallery</div>
+
+  <a-scene physics="debug: false" background="color: #1a1a1a">
+
+    <!-- Camera Rig with Movement and Look Controls -->
+    <a-entity id="rig" movement-controls position="0 1.6 4">
+      <a-entity 
+        camera 
+        look-controls 
+        position="0 0 0" 
+        wasd-controls="acceleration: 50">
+      </a-entity>
+    </a-entity>
+
+    <!-- Cursor for Mouse Click -->
+    <a-entity 
+      cursor="rayOrigin: mouse" 
+      raycaster="objects: .clickable">
+    </a-entity>
+
+    <!-- Lighting -->
+    <a-light type="ambient" color="#bbb"></a-light>
+    <a-light type="directional" intensity="1" position="1 3 2"></a-light>
+
+    <!-- Floor -->
+    <a-plane rotation="-90 0 0" width="50" height="50" color="#222" static-body></a-plane>
+
+    <!-- Walls -->
+    <a-box position="0 2 -12" width="24" height="4" depth="0.1" color="#444" static-body></a-box>
+    <a-box position="-12 2 0" width="0.1" height="4" depth="24" color="#444" static-body></a-box>
+    <a-box position="12 2 0" width="0.1" height="4" depth="24" color="#444" static-body></a-box>
+
+    <!-- Ceiling -->
+    <a-plane position="0 4 0" rotation="90 0 0" width="50" height="50" color="#111"></a-plane>
+
+    <!-- Artworks Container -->
+    <a-entity id="artworks"></a-entity>
+
+    <!-- Optional: Joystick / VR controller -->
+    <a-entity id="joystick" oculus-touch-controls="hand: right"></a-entity>
+  </a-scene>
+
+  <script>
+    const artworks = [
+  // Back wall
+  { src: "img/v2.jpg", title: "The Night Watch", description: "Painted by Rembrandt in 1642, it is housed in the Rijksmuseum and owned by Amsterdam.", position: [-7, 2, -11.9], rotation: [0, 0, 0] },
+  { src: "img/v3.jpg", title: "American Gothic", description: "Painted by Grant Wood in 1930, it is owned by the Art Institute of Chicago.", position: [-3, 2, -11.9], rotation: [0, 0, 0] },
+  { src: "img/v1.jpg", title: "Mona Lisa", description: "Painted by Leonardo da Vinci around 1503, it is owned by France and displayed in Louvre.", position: [1, 2, -11.9], rotation: [0, 0, 0] },
+  { src: "img/v4.jpg", title: "The Scream", description: "Painted by Edvard Munch in 1893, it is housed in the National Museum of Norway, Oslo.", position: [5, 2, -11.9], rotation: [0, 0, 0] },
+
+  // Left wall (x = -11.9, rotate 90 deg)
+  { src: "img/v5.jpg", title: "The Procession of the League", description: "Painted by Elias Garcia Martinez in the early 20th century, it is located in Borja, Spain.", position: [-11.9, 2, -7], rotation: [0, 90, 0] },
+  { src: "img/v6.jpg", title: "A Sure Catch", description: "Painted by Eanger Irving Couse in the early 20th century, it is owned by the Smithsonian American Art Museum.", position: [-11.9, 2, -3], rotation: [0, 90, 0] },
+  { src: "img/v7.jpg", title: "A summer’s day on the beach", description: "Painted by Edward Henry Potthast in the early 1900s, it is owned by the Brooklyn Museum.", position: [-11.9, 2, 1], rotation: [0, 90, 0] },
+  { src: "img/v8.jpg", title: "Hudson River Landscape in Autumn", description: "Painted by Jasper Francis Cropsey in 1860, it is part of the collection at the National Gallery of Art, Washington, D.C.", position: [-11.9, 2, 5], rotation: [0, 90, 0] },
+
+  // Right wall (x = 11.9, rotate -90 deg)
+  { src: "img/v9.jpg", title: "Herbststimmung", description: "Painted by Adolf Kaufmann in the late 19th century, Herbststimmung is held in a private collection.", position: [11.9, 2, -7], rotation: [0, -90, 0] },
+  { src: "img/v10.jpg", title: "Encounter during the Battle of Kijkduin", description: "Painted by Willem van de Velde the Younger in the late 17th century, it is housed in the Rijksmuseum, Amsterdam.", position: [11.9, 2, -3], rotation: [0, -90, 0] },
+  { src: "img/v11.jpg", title: "Flower Piece With Parrot", description: "Painted by Jan Davidsz. de Heem around 1660, Flower Piece With Parrot is housed in the Rijksmuseum, Amsterdam.", position: [11.9, 2, 1], rotation: [0, -90, 0] },
+  { src: "img/v12.jpg", title: "Still Life with White Roses", description: "Painted by Henri Fantin-Latour in 1883, Still Life with White Roses is part of the collection at the Art Institute of Chicago.", position: [11.9, 2, 5], rotation: [0, -90, 0] }
+];
+
+
+    const container = document.getElementById("artworks");
+
+    artworks.forEach(art => {
+  const img = document.createElement("a-image");
+  img.setAttribute("src", art.src);
+  img.setAttribute("position", art.position.join(" "));
+  img.setAttribute("rotation", art.rotation.join(" "));
+  img.setAttribute("width", "3");
+  img.setAttribute("height", "2.5");
+  img.setAttribute("shadow", "");
+  img.setAttribute("class", "clickable");
+  img.setAttribute("onclick", `showArtInfo('${art.title}', '${art.description}')`);
+  container.appendChild(img);
+
+  const label = document.createElement("a-text");
+  label.setAttribute("value", art.title);
+  label.setAttribute("color", "#fff");
+  label.setAttribute("align", "center");
+
+  // Position text slightly below the image
+  const [x, y, z] = art.position;
+  label.setAttribute("position", `${x} ${y - 1.5} ${z}`);
+  label.setAttribute("rotation", art.rotation.join(" "));
+  container.appendChild(label);
+});
+
+
+    function showArtInfo(title, description) {
+      const popup = document.createElement('a-entity');
+      popup.setAttribute('geometry', 'primitive: plane; height: 2; width: 4');
+      popup.setAttribute('material', 'color: #333; opacity: 0.9');
+      popup.setAttribute('position', '0 2 -3');
+      popup.setAttribute('text', `value: ${title}\n${description}; align: center; color: #fff`);
+      document.querySelector('a-scene').appendChild(popup);
+
+      setTimeout(() => popup.remove(), 5000);
+    }
+  </script>
+  <script src="js/default-assets/active.js"></script>
+</body>
+</html>
