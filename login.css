@@ -1,0 +1,42 @@
+
+
+.form-check-input {
+  border: 1px solid;
+  /* Darker yellow */
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.form-control:focus {
+  border-color: yellow;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+.nav-pills .nav-link.active {
+  background-color: black;
+  color: white;
+}
+
+.btn-primary {
+  background-color: yellow;
+  border-color: yellow;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #FFC000;
+  border-color: #FFC000;
+}
+.form-check-input:checked {
+  
+background-color: yellow;
+border-color: yellow;
+}
+
+body {
+  background-color: #f9f9f9; /* Light fallback */
+  background-image: url('img/back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

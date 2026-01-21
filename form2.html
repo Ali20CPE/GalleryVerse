@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Explore classical, modern, and AI-generated art on GalleryVerse.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--ex-->
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+	<!-- JavaScript -->
+	<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+	<!--nx-->
+	<!-- Title -->
+	<title>Partner</title>
+
+	<!-- Favicon -->
+	<link rel="icon" href="./img/gfavicon.png">
+
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		:root {
+			--bs-primary: yellow;
+		}
+    body {
+      background-color: #f9f9f9; /* Light fallback */
+			background-image: url('img/back.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+  }
+		/* Yellow focus border for input, select, and textarea */
+		.form-control:focus,
+		.form-select:focus,
+		textarea.form-control:focus {
+			border-color: yellow;
+			box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+		}
+
+		.btn-primary {
+			background-color: yellow;
+			border-color: yellow;
+			color: black;
+		}
+
+		.btn-primary:hover {
+			background-color: #e0ac00;
+			border-color: #e0ac00;
+		}
+		.feature-icon {
+        color: #2a2a2a;
+        transition: transform 0.3s ease;
+		}
+		.why-choose {
+			margin-top: 40px;
+			padding-top: 30px;
+			border-top: 1px solid #eee;
+		}
+
+		.why-choose h2 {
+			font-size: 1.5rem; /* 24px */
+			color: #333;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.reason {
+			margin-bottom: 25px;
+			padding: 15px;
+			background: #f9f9f9;
+			border-radius: 8px;
+		}
+
+		.reason h3 {
+			font-size: 1.1rem; /* 18px */
+			color: #444;
+			margin-bottom: 8px;
+		}
+
+		.reason p {
+			font-size: 0.9rem; /* 14px */
+			color: #666;
+			line-height: 1.5;
+			margin: 0;
+		}
+	</style>
+
+
+</head>
+
+<body">
+	<!-- Preloader -->
+	<div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Top Search Form Area -->
+    <div class="top-search-area">
+      <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <!-- Close -->
+                      <button type="button" class="btn close-btn" data-dismiss="modal"><i
+                              class="ti-close"></i></button>
+                      <!-- Form -->
+                      <form id="searchForm">
+                          <input name="search3" type="search" id="top-search-bar" class="form-control search-input" placeholder="Search..." required>
+                          <button type="submit" class="btn btn-yellow mt-2">Search</button>
+                        </form>
+                        
+                      
+                        
+                        
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Top Search Form Area End -->
+
+  <!-- Header Area Start -->
+  <header class="header-area">
+      <!-- Main Header Start -->
+      <div class="main-header-area">
+          <div class="classy-nav-container breakpoint-off">
+              <div class="container">
+                  <!-- Classy Menu -->
+                  <nav class="classy-navbar justify-content-between" id="alimeNav">
+
+                      <!-- Logo -->
+                      <a class="nav-brand d-flex align-items-center" href="./index.html">
+                          <h2 class="m-0 text-white">
+                              GalleryVerse<span id="logoDot">.</span>
+                          </h2>
+                      </a>
+                      <!-- Navbar Toggler -->
+                      <div class="classy-navbar-toggler">
+                          <span class="navbarToggler"><span></span><span></span><span></span></span>
+                      </div>
+                      <!-- Menu -->
+                      <div class="classy-menu">
+                          <!-- Menu Close Button -->
+                          <div class="classycloseIcon">
+                              <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                          </div>
+                          <!-- Nav Start -->
+                          <div class="classynav">
+                              <ul id="nav">
+                                  <li><a id="classical-link">Browse</a>
+                                      <ul class="dropdown">
+                                          <li><a href="./figurative.html">Figurative</a></li>
+                                          <li><a href="#">Landscape</a></li>
+                                          <li><a href="#">Still Life</a></li>
+                                          <li><a href="#">Abstract</a></li>
+                                          <li><a href="#">Animals</a></li>
+                                          <li><a href="#">Illustration</a></li>
+                                          <li><a href="#">Posters</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="./galleries.html">Galleries</a></li>
+                                  <li><a href="./artists.html">Artists</a></li>
+                                  <li><a href="./form2.html">Become a partner</a></li>
+                                  <li>
+                                      <div id='dash'>|</div>
+                                  </li>
+                                  <li><a href="./login.html">Login</a></li>
+                              </ul>
+
+                              <!-- Search Icon -->
+                              <div class="search-icon" data-toggle="modal" data-target="#searchModal"><i
+                                      class="ti-search"></i></div>
+                          </div>
+                          <!-- Nav End -->
+                      </div>
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+	<!-- Header Area End -->
+
+	<!-- Welcome Area Start -->
+	<section class="welcome-area">
+		<div class="welcome-slides owl-carousel">
+			<!-- Single Slide -->
+			<div class="single-welcome-slide bg-img bg-overlay"
+				style="background-color: rgba(0, 0, 0, 0.11); height: 63px;">
+
+			</div>
+		</div>
+	</section>
+	<div class="container d-flex justify-content-center align-items-center min-vh-100" style="margin-top: 100px; margin-bottom: 100px;">
+    <div class="card shadow p-4 w-100" style="max-width: 600px;">
+      <h4 class="text-center mb-4 fw-bold">Join Our Artist Network</h4>
+      
+      <form>
+        <!-- Personal Info -->
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input name="fullname" type="text" class="form-control" required>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Phone Number</label>
+            <input name="phonenumber" type="tel" class="form-control">
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Birth Date</label>
+            <input name="birthdate" type="date" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Gender</label>
+            <select class="form-select">
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Location (City, Country)</label>
+          <input name="location" type="text" class="form-control" required>
+        </div>
+  
+        <!-- Artist Details -->
+        <div class="mb-3">
+          <label class="form-label">Preferred Categories</label>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="form-check">
+              <input name="Landscape" class="form-check-input" type="checkbox" id="landscape">
+              <label class="form-check-label" for="landscape">Landscape</label>
+            </div>
+            <div class="form-check">
+              <input name="stillLife" class="form-check-input" type="checkbox" id="stillLife">
+              <label class="form-check-label" for="stillLife">Still Life</label>
+            </div>
+            <div class="form-check">
+              <input name="figurative" class="form-check-input" type="checkbox" id="figurative">
+              <label class="form-check-label" for="figurative">Figurative</label>
+            </div>
+            <div class="form-check">
+              <input name="other" class="form-check-input" type="checkbox" id="otherCategory">
+              <label class="form-check-label" for="otherCategory">Other</label>
+            </div>
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Artwork Experience</label>
+          <select class="form-select" required>
+            <option value="" disabled selected>Select experience level</option>
+            <option>Beginner (0-1 years)</option>
+            <option>Intermediate (2-5 years)</option>
+            <option>Professional (5+ years)</option>
+          </select>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Portfolio Samples (Upload 3-5 images)</label>
+          <input name="protfolio" type="file" class="form-control" accept="image/*" multiple required>
+          <div class="form-text">Max 5MB per image</div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Artist Description</label>
+          <textarea class="form-control" rows="4" placeholder="Describe your artistic style..." required></textarea>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="btn w-100 fw-bold e">
+          Become an Artist Partner
+        </button>
+      </form>
+  
+      <!-- Benefits Section -->
+      <div class="mt-4 pt-3 text-center">
+        <h6>Why Join Us?</h6>
+        <div class="row g-2 mt-2">
+          <div class="col-6">
+            <div class="p-2 border" style="border-color: #ffd700 !important;">
+              <small>🎨 Showcase Your Work</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-2 border" style="border-color: #ffd700 !important;">
+              <small>💰 Earn Commissions</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-2 border" style="border-color: #ffd700 !important;">
+              <small>🌍 Global Reach</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-2 border" style="border-color: #ffd700 !important;">
+              <small>🤝 Artist Support</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<!--ea1-->
+	<!-- Footer Area Start -->
+	<footer class="footer-area bg-overlay even">
+    <div class="container footerpadding">
+        <div class="row">
+
+            <!-- Brand -->
+            <div class="col-md-3 mb-4">
+                <a href="index.html" class="text-decoration-none">
+                    <h2 class="fw-bold text-white">
+                        GalleryVerse<span style="color: yellow; font-size: 34px;">.</span>
+                    </h2>
+                </a>
+                <p class="mt-2 footerpcolor">Explore a curated world of classic, modern, and AI-generated
+                    art.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-semibold mb-3 text-white">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-decoration-none footerpcolor">Home</a></li>
+                    <li><a href="artists.html" class="text-decoration-none footerpcolor">Artists</a></li>
+                    <li><a href="galleries.html" class="text-decoration-none footerpcolor">Gallery</a></li>
+                    <li><a href="form.html" class="text-decoration-none footerpcolor">Request Art</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-semibold mb-3 text-white">Contact</h5>
+                <p class="mb-1 footerpcolor"><i class="ti-email me-2"></i><span
+                        style="margin-left: 5px;">support@galleryverse.com</span></p>
+                <p class="mb-1 footerpcolor"><i class="ti-mobile me-2"></i><span
+                        style="margin-left: 5px;">+962 795 939 205</span></p>
+                <p class="footerpcolor"><i class="ti-location-pin me-2"></i><span
+                        style="margin-left: 5px;">Amman, Jordan</span></p>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-semibold mb-3 text-white">Newsletter</h5>
+                <form class="d-flex flex-column">
+                    <input name="email" type="email" class="emailInput mb-2" placeholder="Your email" required>
+                    <button class="btn btn-sm subscripe-Button" style="background-color: yellow; " type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <hr class="my-4" style="background-color: rgba(255, 255, 255, 0.089);">
+
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md-6 text-md-start">
+                <p class="mb-0 text-white">&copy; 2025 GalleryVerse. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <div class="social-icons d-flex justify-content-center justify-content-md-end">
+                    <a href="#" class="fs-5 mr-1 text-white" style="transition: color 0.3s; text-decoration: none;"><i
+                            class="ti-facebook"></i></a>
+                    <a href="#" class="fs-5 mr-1 text-white" style="transition: color 0.3s; text-decoration: none;"><i
+                            class="ti-twitter-alt"></i></a>
+                    <a href="#" class="fs-5 mr-1 text-white" style="transition: color 0.3s; text-decoration: none;"><i
+                            class="ti-linkedin"></i></a>
+                    <a href="#" class="fs-5 mr-1 text-white" style="transition: color 0.3s; text-decoration: none;"><i
+                            class="ti-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+	<!-- Footer Area End -->
+
+	<!-- **** All JS Files ***** -->
+	<!-- jQuery 2.2.4 -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Popper -->
+	<script src="js/popper.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- All Plugins -->
+	<script src="js/alime.bundle.js"></script>
+	<!-- Active -->
+	<script src="js/default-assets/active.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Leaflet JS -->
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+	<script>
+		const map = L.map('map').setView([31.963158, 35.930359], 6); // Default view: Amman
+
+		// Load OpenStreetMap tiles
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; OpenStreetMap contributors'
+		}).addTo(map);
+
+		let marker;
+
+		// Capture click event
+		map.on('click', function (e) {
+			const {lat, lng} = e.latlng;
+			document.getElementById('locationInput').value = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+
+			if (marker) {
+				marker.setLatLng(e.latlng);
+			} else {
+				marker = L.marker(e.latlng).addTo(map);
+			}
+		});
+	</script>
+
+</body>
+
+</html>

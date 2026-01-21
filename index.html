@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Explore classical, modern, and AI-generated art on GalleryVerse.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- External Libraries -->
+        <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="style.css">
+    
+        <!-- Title & Favicon -->
+        <title>GalleryVerse — Explore Classical, Modern & AI Artworks</title>
+        <link rel="icon" href="./img/gfavicon.png">
+    </head>
+    
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Top Search Form Area Start -->
+    <div class="top-search-area">
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- Close -->
+                        <button type="button" class="btn close-btn" data-dismiss="modal"><i
+                                class="ti-close"></i></button>
+                        <!-- Form -->
+                        <form id="searchForm" class="row">
+                            <input type="search" id="top-search-bar" class="form-control search-input borcolor col-8" style="border: 2px solid yellow !important;" placeholder="Search..." required>
+                            <button type="submit" class="btn btn-yellow col-4">Search</button>
+                          </form>
+                          
+                        
+                          
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top Search Form Area End -->
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alimeNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand d-flex align-items-center" href="./index.html">
+                            <h2 class="m-0 text-white">
+                                GalleryVerse<span id="logoDot">.</span>
+                            </h2>
+                        </a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Menu Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li><a id="classical-link">Browse</a>
+                                        <ul class="dropdown">
+                                            <li><a href="./figurative.html">Figurative</a></li>
+                                            <li><a href="#">Landscape</a></li>
+                                            <li><a href="#">Still Life</a></li>
+                                            <li><a href="#">Abstract</a></li>
+                                            <li><a href="#">Animals</a></li>
+                                            <li><a href="#">Illustration</a></li>
+                                            <li><a href="#">Posters</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./galleries.html">Galleries</a></li>
+                                    <li><a href="./artists.html">Artists</a></li>
+                                    <li><a href="./form2.html">Become a partner</a></li>
+                                    <li>
+                                        <div id='dash'>|</div>
+                                    </li>
+                                    <li><a href="./login.html">Login</a></li>
+                                </ul>
+
+                                <!-- Search Icon -->
+                                <div class="search-icon" data-toggle="modal" data-target="#searchModal"><i
+                                        class="ti-search"></i></div>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Welcome Area Start -->
+    <section class="welcome-area">
+        <!-- <div class="welcome-slides"> -->
+            <!-- Single Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay backgroundImg">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <!-- Welcome Text -->
+                        <div class="col-12 col-lg-8 col-xl-8">
+                            <div class="welcome-text">
+                                <h2>Discover the best in <span class="titleColor">Classical & Modern Art</span></h2>
+                                <p>Browse and download high-resolution,
+                                    Figurative, Still Life and Landscape</p>
+                                <div class="hero-btn-group">
+                                    <!-- <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4" id="all-l">Explore Now</a> -->
+                                    <a href="form.html" class="btn alime-btn mb-3 mb-sm-0 mr-4 req">Request Custom
+                                        Art</a>
+                                    <a href="aigenerate.html" class="btn alime-btn mb-3 mb-sm-0 mr-4">Generate AI
+                                        Artwork</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    </section>
+    <!-- Gallery Area Start -->
+    <div class="alime-blog-area">
+        <div class="even container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <h3 class=" qu fs-4 fw-bold py-2 px-3 rounded">
+                        Top Artists You Need to Know
+                    </h3>
+                </div>
+            </div>
+            <div class="row" id="blog-container"></div>
+
+            <!-- Button section -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-12 text-center artistsGalleriesButton">
+                    <a href="artists.html" class="btn btn-primary btn-see-more">
+                        Explore All Artists
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Add galleryvr here-->
+    <div class="odd">
+        <div class="container p-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <h3 class="qu fs-4 fw-bold py-2 px-3 rounded">
+                        Don’t Just View Art — Live It
+                    </h3>
+                </div>
+            </div>
+
+            <div class="position-relative" style="max-width: 100%; margin: 0 auto;">
+                <iframe id="vrFrame" src="galleryvr.html" frameborder="0" allowfullscreen
+                    style="width: 100%; height: 400px; border-radius: 12px;">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <div class="alime-blog-area">
+        <div class="container even">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <h3 class="qu fs-4 fw-bold px-3 rounded">
+                        Top Galleries You Need to Know
+                    </h3>
+                </div>
+            </div>
+            <div class="row" id="blog-container2"></div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-12 text-center artistsGalleriesButton">
+                    <a href="galleries.html" class="btn btn-primary btn-see-more">
+                        Explore All Galleries
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Area End -->
+    <div class="odd p-4">
+        <section class="artist-invite">
+            <div class="container text-center">
+                <h2 class="mb-3 fw-bold">
+                    Are You an Artist?
+                </h2>
+                <p class="lead mb-5">
+                    <span class="d-inline-block w-100">Share your talent with the world—upload your work,
+                        create custom pieces, or explore AI-powered art generation on GalleryVerse.</span>
+                </p>
+                    <div class="row justify-content-center">
+                        <div class="col-12 artistsGalleriesButton">
+                            <a href="form2.html" class="btn btn-primary btn-see-more">
+                                Become a partner
+                            </a>
+                        </div>
+                    </div>
+
+                
+            </div>
+        </section>
+    </div>
+    <div class="container even">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <h3 class="qu fs-4 fw-bold px-3 rounded">
+                    <span style="color: rgb(255, 187, 0);">❝</span> From Brush to Algorithm <span
+                        style="color: rgb(255, 187, 0);">❞</span>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="height: 600px;">
+            <div class="col-12 col-md-10">
+                <div id="art-comparison" class="juxtapose juxtStyle">
+                    <!-- Juxtapose content goes here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Area Start -->
+    <footer class="footer-area bg-overlay even">
+        <div class="container footerpadding">
+            <div class="row">
+
+                <!-- Brand -->
+                <div class="col-md-3 mb-4">
+                    <a href="index.html" class="text-decoration-none">
+                        <h2 class="fw-bold text-white">
+                            GalleryVerse<span style="color: yellow; font-size: 34px;">.</span>
+                        </h2>
+                    </a>
+                    <p class="mt-2 footerpcolor">Explore a curated world of classic, modern, and AI-generated
+                        art.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-semibold mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none footerpcolor">Home</a></li>
+                        <li><a href="artists.html" class="text-decoration-none footerpcolor">Artists</a></li>
+                        <li><a href="galleries.html" class="text-decoration-none footerpcolor">Gallery</a></li>
+                        <li><a href="form.html" class="text-decoration-none footerpcolor">Request Art</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-semibold mb-3 text-white">Contact</h5>
+                    <p class="mb-1 footerpcolor"><i class="ti-email me-2"></i><span
+                            style="margin-left: 5px;">support@galleryverse.com</span></p>
+                    <p class="mb-1 footerpcolor"><i class="ti-mobile me-2"></i><span
+                            style="margin-left: 5px;">+962 795 939 205</span></p>
+                    <p class="footerpcolor"><i class="ti-location-pin me-2"></i><span
+                            style="margin-left: 5px;">Amman, Jordan</span></p>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-semibold mb-3 text-white">Newsletter</h5>
+                    <form class="d-flex flex-column">
+                        <input name="email" type="email" class="form-control emailInput mb-2" placeholder="Your email" required>
+                        <button class="btn btn-sm subscripe-Button" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="my-4" style="background-color: rgba(255, 255, 255, 0.089);">
+
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 text-md-start">
+                    <p class="mb-0 text-white">&copy; 2025 GalleryVerse. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-icons d-flex justify-content-center justify-content-md-end">
+                        <a href="#" class="fs-5 mr-1 text-white" style="transition: color 0.3s;"><i
+                                class="ti-facebook"></i></a>
+                        <a href="#" class="fs-5 mr-1 text-white" style="transition: color 0.3s;;"><i
+                                class="ti-twitter-alt"></i></a>
+                        <a href="#" class="fs-5 mr-1 text-white" style="transition: color 0.3s;"><i
+                                class="ti-linkedin"></i></a>
+                        <a href="#" class="fs-5 mr-1 text-white" style="transition: color 0.3s;"><i
+                                class="ti-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Footer Area End -->
+
+    <!-- **** All JS Files ***** -->
+    <!-- Juxtapose JS -->
+    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/alime.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
+    
+    <script>
+        const slider = new juxtapose.JXSlider('#art-comparison', [
+            {src: 'img/h1.jpg', label: 'Ali Hndawi, 2025'},  // Match your actual image paths
+            {src: 'img/h2.jpg', label: 'François Lemoyne,1736'}
+        ], {
+            animate: true,
+            startingPosition: "50%",
+            makeResponsive: true,
+            showLabels: true,
+            showCredits: false
+        });
+
+
+        function toggleFullscreen() {
+            const iframe = document.getElementById('vrFrame');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+        }
+
+        let globalIndex = 0;
+
+        function createartist(name1, image1, artworks1, nationality1, dates1, link1) {
+            const delays = ["100", "400", "700"];
+            const delay = delays[globalIndex % delays.length];
+            globalIndex++;
+
+            const container = document.getElementById("blog-container");
+
+            const col = document.createElement("div");
+            col.className = "col-12 col-sm-6 col-lg-3";
+
+            col.innerHTML = `
+                <div class="single-post-area wow fadeInUpBig" data-wow-delay="${delay}ms">
+                <a href="${link1}" class="post-thumbnail">
+                    <img src="${image1}" alt="${name1}">
+                </a>
+                <a href="${link1}" class="btn post-catagory" style="color: black; font-weight: 600;">
+                    ${artworks1}
+                </a>
+                <div class="post-content">
+                    <a href="${link1}" class="post-title d-flex align-items-center" style="gap: 6px;">
+                    ${name1}
+                    </a>
+                    <div class="post-meta">
+                    <p style="color:white;">${nationality1} ${dates1}</p>
+                    </div>
+                </div>
+                </div>`;
+
+            container.appendChild(col);
+        }
+        createartist("August Macke", "img/ll.jpg", "118 Artworks", "German", "1887-1914", "./single-blog.html");
+        createartist("Sir Joshua Reynolds", "img/ll2.jpg", "112 Artworks", "English", "1723 - 1792", "#");
+        createartist("Christian Rohlfs", "img/ar3.jpg", "175 Artworks", "German", "1849-1938", "#");
+        createartist("Jacek Malczewski", "img/ar4.jpg", "251 Artworks", "Polish", "1854-1929", "#");
+        createartist("Max Beckmann", "img/ar5.jpg", "587 Artworks", "German", "1884-1950", "#");
+        createartist("Raimundo de Madrazo y Garreta", "img/ar6.jpg", "54 Artworks", "German", "1841-1920", "#");
+        createartist("Franz von Lenbach", "img/ar7.jpg", "77 Artworks", "German", "1836-1904", "#");
+        createartist("Jean Béraud", "img/ar8.jpg", "115 Artworks", "French", "1849-1935", "#");
+
+        let globalIndex2 = 0;
+
+        function createartist2(name1, image1, artworks1, link1) {
+            const delays = ["100", "400", "700"];
+            const delay = delays[globalIndex2 % delays.length];
+            globalIndex2++;
+
+            const container2 = document.getElementById("blog-container2");
+
+            const col = document.createElement("div");
+            col.className = "col-12 col-sm-6 col-lg-3";
+
+            col.innerHTML = `
+                <div class="single-post-area wow fadeInUpBig" data-wow-delay="${delay}ms">
+                <a href="${link1}" class="post-thumbnail">
+                    <img src="${image1}" alt="${name1}">
+                </a>
+                
+                <div class="post-content">
+                    <a href="${link1}" class="post-title d-flex align-items-center" style="gap: 6px;">
+                    ${name1}
+                    </a>
+                    <div class="post-meta">
+                    
+                    
+                    </div>
+                </div>
+                </div>`;
+
+            container2.appendChild(col);
+        }
+        createartist2("Animals", "img/gal1.jpg", "", "#");
+        createartist2("Landscape", "img/gal2.jpg", "", "#");
+        createartist2("Abstract", "img/gal3.jpg", "", "#");
+        createartist2("Figurative", "img/gal4.jpg", "", "./figurative.html");
+        createartist2("Botanical", "img/gal5.jpg", "", "#");
+        createartist2("Asian Art", "img/gal6.jpg", "", "#");
+        createartist2("Illustration", "img/gal7.jpg", "", "#");
+        createartist2("Posters", "img/gal8.jpg", "", "#");
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("searchForm");
+    const input = document.getElementById("top-search-bar");
+
+    if (form && input) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const query = input.value.trim();
+            if (query) {
+                window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+            }
+        });
+    }
+});
+    </script>
+</body>
+
+</html>

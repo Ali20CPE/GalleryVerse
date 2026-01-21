@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--ex-->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+
+    <!-- JavaScript -->
+    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+    <!--nx-->
+    <!-- Title -->
+    <title>GalleryVerse</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/gfavicon.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Top Search Form Area -->
+    <div class="top-search-area">
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- Close -->
+                        <button type="button" class="btn close-btn" data-dismiss="modal"><i class="ti-close"></i></button>
+                        <!-- Form -->
+                        <form action="index.html" method="post">
+                            <input type="search" name="top-search-bar" class="form-control" placeholder="Search and hit enter...">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alimeNav">
+                        <div class="row w-100 align-items-center">
+                            <!-- Logo -->
+                            <div class="col-6 col-md-3">
+                                <a class="nav-brand d-flex align-items-center" href="./index.html" style="text-decoration: none;">
+                                  <h2 class="m-0 text-white" style="font-size: 1.5rem;">
+                                    GalleryVerse<span style="color: yellow;" style="font-size: 2rem;">.</span>
+                                  </h2>
+                                </a>
+                              </div>
+                            
+
+                            <!-- Navbar Toggler -->
+                            <div class="col-6 d-md-none text-end">
+                                <div class="classy-navbar-toggler">
+                                  <span class="navbarToggler"><span></span><span></span><span></span></span>
+                                </div>
+                              </div>
+
+                            <!-- Menu -->
+                            <div class="col-12 col-md-9 mt-3 mt-md-0">
+                                <div class="classy-menu">
+                                    <!-- Menu Close Button -->
+                                    <div class="classycloseIcon">
+                                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                                    </div>
+                                    <!-- Nav Start -->
+                                    <div class="classynav">
+                                        <ul id="nav">
+                                            <li><a href="" id="classical-link">Classical Art</a>
+                                                <ul class="dropdown" style="background-color: rgb(102, 98, 98);">
+                                                    <li><a href="./figurative.html">Figurative</a></li>
+                                                    <li><a href="./about.html">Landscape</a></li>
+                                                    <!-- <li><a href="./gallery.html">- illustrations</a></li> -->
+                                                    <!-- <li><a href="./blog.html">- Drawings</a></li> -->
+                                                    <li><a href="./single-blog.html">Still Life</a></li>
+                                                    <!-- <li><a href="./contact.html">- Animals</a></li> -->
+                                                </ul>
+                                            </li>
+                                            <li><a href="#" id="modern-link">Modern Art</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="./index.html">- Figurative</a></li>
+                                                    <li><a href="./about.html">- Landscape</a></li>
+                                                    <!-- <li><a href="./gallery.html">- illustrations</a></li> -->
+                                                    <!-- <li><a href="./blog.html">- Drawings</a></li> -->
+                                                    <li><a href="./single-blog.html">- Still Life</a></li>
+                                                    <!-- <li><a href="./contact.html">- Animals</a></li> -->
+                                                </ul>
+                                            </li>
+                                            <li><a href="#" id="ai-link">AI Art</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="./index.html">- Figurative</a></li>
+                                                    <li><a href="./about.html">- Landscape</a></li>
+                                                    <!-- <li><a href="./gallery.html">- illustrations</a></li> -->
+                                                    <!-- <li><a href="./blog.html">- Drawings</a></li> -->
+                                                    <li><a href="./single-blog.html">- Still Life</a></li>
+                                                    <!-- <li><a href="./contact.html">- Animals</a></li> -->
+                                                </ul>
+                                            </li>
+                                            <li><a href="./blog.html">Artists</a></li>
+                                            <li><div id='dash' style='font-weight: 100; width:5px'>|</div></li>
+                                            <li><a href="./login.html">Login</a></li>
+                                        </ul>
+
+                                        <!-- Search Icon -->
+                                        <div class="search-icon" data-toggle="modal" data-target="#searchModal"><i class="ti-search"></i></div>
+                                    </div>
+                                    <!-- Nav End -->
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Welcome Area Start -->
+    <section class="welcome-area">
+        <div class="welcome-slides owl-carousel">
+            <!-- Single Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/1.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <!-- Welcome Text -->
+                        <div class="col-12 col-lg-8 col-xl-8">
+                            <div class="welcome-text">
+                                <h2 data-animation="bounceInDown" data-delay="900ms">Dicover the best in <span style="color:yellow;">Classical & Modern Art</span></h2>
+                                <p data-animation="bounceInDown" data-delay="500ms">Browse and download high-resolution, Figurative, Still Life and Landscape</p>
+                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
+                                    <!-- <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4" id="all-l">Explore Now</a> -->
+                                    <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4">Request Custom Art</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Slide -->
+            
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+    
+      
+    <!-- Gallery Area Start -->
+    <div class="alime-portfolio-area section-padding-80 clearfix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Projects Menu -->
+                    <div class="alime-projects-menu">
+                        <div class="portfolio-menu text-center">
+                            <button class="btn active" data-filter="*" id="all-btn">All</button>
+                            <button class="btn" data-filter=".classical" id="classical-btn">Classical Art</button>
+                            <button class="btn" data-filter=".modern" id="modern-btn">Modern Art</button>
+                            <button class="btn" data-filter=".ai" id="ai-btn">Ai Art</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row alime-portfolio">
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item classical mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/c1.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/c1.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <button class="artwork-title" onclick="openArtModal('artModalc1')">
+                            <h6>Classical Art Title</h6>
+                        </button>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+                
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item modern mb-30 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/m1.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/m1.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <button class="artwork-title" onclick="openArtModal('artModalm1')">
+                            <h6>Classical Art Title</h6>
+                        </button>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ai mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/a1.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/a1.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <button class="artwork-title" onclick="openArtModala1()">
+                            <h6>Classical Art Title</h6>
+                        </button>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+                
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item modern mb-30 wow fadeInUp" data-wow-delay="700ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/m2.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/m2.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <button class="artwork-title" onclick="openArtModal('artModalm2')">
+                            <h6>Classical Art Title</h6>
+                        </button>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+                
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ai mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/a2.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/a2.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item classical mb-30 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/c2.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/c2.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ai mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/a3.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/a3.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item classical mb-30 wow fadeInUp" data-wow-delay="700ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/c3.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/c3.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item modern mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/m3.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/m3.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item classical mb-30 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/c4.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/c4.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item modern mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/m4.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/m4.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+                
+
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ai mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/a4.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/a4.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item modern mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/m5.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/m5.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item ai mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/a5.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/a5.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item classical mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="img/indexp2/c5.jpg" alt="">
+                        <div class="hover-content">
+                            <a href="img/indexp2/c5.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                    <div class="image-caption text-center mt-2">
+                        <a href="art-details/classical1.html" target="_blank" class="text-dark">
+                            <h6 class="mb-1">Classical Art Title</h6>
+                        </a>
+                        <p class="small mb-0">This is a short description of the artwork.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 text-end wow fadeInUp" data-wow-delay="700ms">
+                    <a href="./index.html#all-btn" class="btn alime-btn btn-2 mt-15">Previous</a>
+                    
+                </div>
+                <div class="col-6 text-right wow fadeInUp" data-wow-delay="700ms">
+                    <a href="./indexp3.html" class="btn alime-btn btn-2 mt-15">Next</a>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Area End -->
+    <!--sc1-->
+    <div class="art-modal" id="artModalc1">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeArtModal('artModalc1')">&times;</span>
+            
+            <!-- Main Content -->
+            <div class="artwork-main">
+                <div class="artwork-image">
+                    <img src="img/indexp2/c1.jpg" alt="Artwork Title">
+                </div>
+                
+                <div class="artwork-details">
+                    <h1>A Venice Scene <span>(1905)</span></h1>
+                    <div class="artist-info">
+                        <a href="#">Karl Kaufmann</a> (German, 1843)
+                    </div>
+                    <div class="artist-info">
+                        <a href="#">109 Artworks</a> Follow+
+                    </div>
+                    <!-- Download Options -->
+                    <div class="download-options">
+                        <div class="download-item">
+                            <div class="file-info">
+                                <span class="resolution">1113 x 1800px</span>
+                                <span class="file-size">JPG, 2.05 MB</span>
+                            </div>
+                            <button class="download-btn">Download</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    <!--ec1-->
+    <!--sm1-->
+    <div class="art-modal" id="artModalm1">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeArtModal('artModalm1')">&times;</span>
+            <!-- Main Content -->
+            <div class="artwork-main">
+                <div class="artwork-image">
+                    <img src="img/indexp2/m1.jpg" alt="Artwork Title">
+                </div>
+                <div class="artwork-details">
+                    <h1 style="font-size: 16px;color: #333;font-weight: bold;">A ee Venice Scene <span>(1905)</span></h1>
+                    <div class="artist-info">
+                        <a href="#" style="color: #3f3f3f">Karl Kaufmann</a> (German, 1843)
+                    </div>
+                    <div class="artist-info" style="color: #3f3f3f">
+                        109 Artworks <a href="#" style="color: #3f3f3f">Follow+</a>
+                    </div>
+                    <!-- Download Options -->
+                    <div class="download-options">
+                        <div class="download-item">
+                            <div class="file-info">
+                                <span class="resolution" style="color: gray;">Standard, 1113 x 1800px</span>
+                                <br>
+                                <span class="file-size" style="color: rgb(168, 166, 166); font-size: small;">JPG, 2.05 MB</span>
+                            </div>
+                            <button class="download-btn">Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--em1-->
+    <!--sm2-->
+    <div class="art-modal" id="artModalm2">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeArtModal('artModalm2')">&times;</span>
+            
+            <!-- Main Content -->
+            <div class="artwork-main">
+                <div class="artwork-image">
+                    <img src="img/indexp2/m2.jpg" alt="Artwork Title">
+                </div>
+                
+                <div class="artwork-details">
+                    <h1 id="arw">Artwork Title <span>(Year)</span></h1>
+                    <div class="artist-info">
+                        <a href="#">Artist Name</a> (Nationality, Birth-Death)
+                    </div>
+                    <!-- Social Sharing -->
+                    <div class="social-sharing">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <!-- Download Options -->
+                    <div class="download-options">
+                        <div class="download-item">
+                            <div class="file-info">
+                                <span class="resolution">1113 x 1800px</span>
+                                <span class="file-size">JPG, 2.05 MB</span>
+                            </div>
+                            <button class="download-btn">Download</button>
+                        </div>
+                        <div class="download-item premium">
+                            <div class="file-info">
+                                <span class="resolution">1722 x 2784px</span>
+                                <span class="file-size">JPG, 4.37 MB</span>
+                            </div>
+                            <button class="download-btn premium">Download</button>
+                        </div>
+                    </div>
+                    <!-- License Info -->
+                    <div class="license-info">
+                        <p><strong>License:</strong> Public domain. Free for personal and commercial use.</p>
+                        <a href="#" class="license-more">Why public domain?</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Related Artworks -->
+            <div class="related-artworks">
+                <h2>More by Artist Name</h2>
+                <div class="artwork-grid">
+                    <!-- Repeat this block for each related artwork -->
+                    <div class="artwork-item">
+                        <img src="related-artwork.jpg" alt="Related Artwork">
+                        <div class="artwork-info">
+                            <h3>Related Artwork Title</h3>
+                            <p>Artist Name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--em2-->
+    <!--sa1-->
+    <div class="art-modal" id="artModala1">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeArtModal('artModala1')">&times;</span>
+            
+            <!-- Main Content -->
+            <div class="artwork-main">
+                <div class="artwork-image">
+                    <img src="img/indexp2/a1.jpg" alt="Artwork Title">
+                </div>
+                
+                <div class="artwork-details">
+                    <h1>Artwork Title <span>(Year)</span></h1>
+                    <div class="artist-info">
+                        <a href="#">Artist Name</a> (Nationality, Birth-Death)
+                    </div>
+                    
+                    <!-- Social Sharing -->
+                    <div class="social-sharing">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    
+                    <!-- Download Options -->
+                    <div class="download-options">
+                        <div class="download-item">
+                            <div class="file-info">
+                                <span class="resolution">1113 x 1800px</span>
+                                <span class="file-size">JPG, 2.05 MB</span>
+                            </div>
+                            <button class="download-btn">Download</button>
+                        </div>
+                        
+                        <div class="download-item premium">
+                            <div class="file-info">
+                                <span class="resolution">1722 x 2784px</span>
+                                <span class="file-size">JPG, 4.37 MB</span>
+                            </div>
+                            <button class="download-btn premium">Download</button>
+                        </div>
+                    </div>
+                    
+                    <!-- License Info -->
+                    <div class="license-info">
+                        <p><strong>License:</strong> Public domain. Free for personal and commercial use.</p>
+                        <a href="#" class="license-more">Why public domain?</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Artworks -->
+            <div class="related-artworks">
+                <h2>More by Artist Name</h2>
+                <div class="artwork-grid">
+                    <!-- Repeat this block for each related artwork -->
+                    <div class="artwork-item">
+                        <img src="related-artwork.jpg" alt="Related Artwork">
+                        <div class="artwork-info">
+                            <h3>Related Artwork Title</h3>
+                            <p>Artist Name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ea1-->
+    <!-- Footer Area Start -->
+    <footer class="footer-area">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-content d-flex align-items-center justify-content-between">
+                        <!-- Copywrite Text -->
+                        <div class="footer-logo">
+                            <a href="#"><h2 style="color:black;">GalleryVerse<span style="color:yellow;font-size:40px">.</span></h2></a>
+                        </div>
+                        <!-- Footer Logo -->
+                        
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="ti-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-twitter-alt" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-linkedin" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-pinterest" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/alime.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
+    <script>
+        const slider = new juxtapose.JXSlider('#art-comparison', [
+          { src: 'img/h1.jpg', label: 'Ali Hndawi, 2025' },  // Match your actual image paths
+          { src: 'img/h2.jpg', label: 'François Lemoyne,1736' }
+        ], {
+          animate: true,
+          startingPosition: "50%",
+          makeResponsive: true,
+          showLabels: true,
+          showCredits: false
+        });
+      </script>
+</body>
+
+</html>
